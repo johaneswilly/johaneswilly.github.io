@@ -125,3 +125,17 @@ scrollBottom.forEach((el) => observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el) => observer.observe(el));
+
+
+// DarkMode
+
+var lightMode = document.getElementById("lightmode");
+
+lightMode.onclick = function() {
+    document.body.classList.toggle("light-theme");
+    if(document.body.classList.contains("light-theme")) {
+        lightMode.querySelector("i").className = "bx bxs-moon"; 
+    } else {
+        lightMode.querySelector("i").className = "bx bxs-sun"; 
+    }
+}

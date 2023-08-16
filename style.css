@@ -25,6 +25,24 @@
     0 0 150px rgba(18, 247, 255, 0.3);
 }
 
+.light-theme{
+  --text-color: #250821; /* Warna teks utama */
+  --hover-color: #ff9500; /* Warna saat dihover (warna oranye) */
+  --bg-color: #f5f5f5; /* Warna latar belakang utama */
+  --second-bg-color: #a9bbca; /* Warna latar belakang kedua */
+  --big-font: 2.5rem;
+  --normal-font: 2rem;
+  --neon-box-shadow: 0 0 0.5rem #ff9500; /* Menggunakan warna oranye untuk shadow */
+  --h2-font: 3rem;
+  --font-neon-text-shadow: 0 0 10px rgba(255, 149, 0, 0.3),
+    0 0 20px rgba(255, 149, 0, 0.3), 0 0 30px rgba(255, 149, 0, 0.3),
+    0 0 40px rgba(255, 149, 0, 0.3), 0 0 70px rgba(255, 149, 0, 0.3),
+    0 0 80px rgba(255, 149, 0, 0.3), 0 0 100px rgba(255, 149, 0, 0.3),
+    0 0 150px rgba(255, 149, 0, 0.3);
+}
+
+
+
 ::-webkit-scrollbar {
   height: 0;
   width: .5rem;
@@ -100,15 +118,20 @@ span {
     0 0 150px rgba(18, 247, 255, 0.6);
 }
 
+/* Light Mode Text Shadow */
+.light-theme .navlist a:hover {
+  color: var(--hover-color);
+  text-shadow: 0 0 10px rgba(255, 149, 0, 0.6),
+    0 0 20px rgba(255, 149, 0, 0.6), 0 0 30px rgba(255, 149, 0, 0.6),
+    0 0 40px rgba(255, 149, 0, 0.6), 0 0 70px rgba(255, 149, 0, 0.6),
+    0 0 80px rgba(255, 149, 0, 0.6), 0 0 100px rgba(255, 149, 0, 0.6),
+    0 0 150px rgba(255, 149, 0, 0.6);
+}
+
 .navlist a.active {
   color: var(--hover-color);
 }
 
-#darkmode {
-  font-size: 1.8rem;
-  display: inline;
-  display: none;
-}
 
 #menu-icon {
   font-size: 1.8rem;
@@ -305,6 +328,11 @@ section {
   overflow: hidden;
 }
 
+/* Light Mode Button Box Shadow */
+.light-theme .social-icons a {
+  box-shadow: 0 0 0.5rem #ff9500; /* Ganti warna dan properti sesuai keinginan Anda */
+}
+
 .social-icons a i {
   font-size: 1.5rem;
 }
@@ -357,6 +385,11 @@ section {
   filter: blur(50px);
 }
 
+/* Light Mode Liquid Shape Fill Color */
+.light-theme .liquid-shape path {
+  fill: #ff9500; /* Ganti dengan warna oranye yang diinginkan */
+}
+
 /* About Section */
 
 .about {
@@ -388,6 +421,16 @@ section {
   left: -30px;
 }
 
+.liquid-shape2:nth-child(2) {
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+}
+
+/* Light Mode Liquid Shape2 Fill Color */
+.light-theme .liquid-shape2 path {
+  fill: #ff9500; /* Ganti dengan warna oranye yang diinginkan */
+}
+
 .about-content span {
   color: #fdfdfd;
   font-size: 0.8rem;
@@ -412,6 +455,11 @@ section {
   color: #fdfdfd;
   font-weight: 300;
   margin-bottom: 1.5rem;
+}
+
+/* About Content p Color */
+.light-theme .about-content p {
+  color: #250821; 
 }
 
 .info-about1,
@@ -443,8 +491,8 @@ section {
 }
 
 .info-about3 {
-  left: 61%;
-  top: 80%;
+  left: 57%;
+  top: 60%;
 }
 
 .img-about span {
@@ -454,7 +502,7 @@ section {
 }
 
 .img-about p {
-  font-size: 0.8rem;
+  font-size: .6rem;
 }
 
 /* Services Section*/
@@ -530,6 +578,12 @@ section {
   letter-spacing: 1px;
   color: #bdbdbd;
   line-height: 1.6;
+}
+
+/* LightMode service-box p color */
+
+.light-theme .service-box p {
+  color: #250821;
 }
 
 /* Skills Section */
@@ -745,6 +799,11 @@ section {
   text-align: center;
   transition: .5s;
   padding: 0 2rem;
+}
+
+/* Light Mode Port Content background Color */
+.light-theme .port-content {
+  background: linear-gradient(rgba(0,0,0,.2), #ff9500);
 }
 
 .port-box:hover .port-content {
@@ -988,6 +1047,31 @@ footer a i {
 
 
 /* Break Points */
+
+@media(max-width: 2000px){
+  .img-box img {
+    margin-bottom: -220px;
+  }
+}
+
+@media(max-width: 1500px){
+  .img-box img {
+    margin-bottom: -160px;
+  }
+}
+
+@media(max-width: 1380px){
+  .img-box img {
+    margin-bottom: -120px;
+  }
+}
+
+@media(max-width: 1280px){
+  .img-box img {
+    margin-bottom: -120px;
+  }
+}
+
 
 @media(max-width: 991px) {
   header,
